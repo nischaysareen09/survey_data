@@ -1,0 +1,83 @@
+Combined DataFrame info:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 2100 entries, 0 to 2099
+Data columns (total 14 columns):
+ #   Column             Non-Null Count  Dtype
+---  ------             --------------  -----
+ 0   id                 2100 non-null   int64
+ 1   person_name        2100 non-null   object
+ 2   nine_box_category  2100 non-null   object
+ 3   feedback           2100 non-null   object
+ 4   updated            450 non-null    object
+ 5   reviewed           2100 non-null   bool
+ 6   adjusted           1650 non-null   object
+ 7   label              997 non-null    float64
+ 8   performance_class  997 non-null    float64
+ 9   potential_class    997 non-null    float64
+ 10  feedback_clean     997 non-null    object
+ 11  feedback_len       772 non-null    float64
+ 12  num_of_sent        772 non-null    float64
+ 13  data_type          772 non-null    object
+dtypes: bool(1), float64(5), int64(1), object(7)
+memory usage: 215.5+ KB
+None
+c:\Users\nisch\Desktop\Nischayy\Grand Theft Auto V\survey_data_analysis.py:51: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_combined['label'].fillna(df_combined['label'].mean(), inplace=True)
+c:\Users\nisch\Desktop\Nischayy\Grand Theft Auto V\survey_data_analysis.py:52: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_combined['performance_class'].fillna(df_combined['performance_class'].mean(), inplace=True)
+c:\Users\nisch\Desktop\Nischayy\Grand Theft Auto V\survey_data_analysis.py:53: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_combined['potential_class'].fillna(df_combined['potential_class'].mean(), inplace=True)
+c:\Users\nisch\Desktop\Nischayy\Grand Theft Auto V\survey_data_analysis.py:54: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_combined['feedback_clean'].fillna('', inplace=True)
+c:\Users\nisch\Desktop\Nischayy\Grand Theft Auto V\survey_data_analysis.py:55: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_combined['feedback_len'].fillna(df_combined['feedback_len'].mean(), inplace=True)
+c:\Users\nisch\Desktop\Nischayy\Grand Theft Auto V\survey_data_analysis.py:56: FutureWarning: A value is trying to be set on a copy of a DataFrame or Series through chained assignment using an inplace method.
+The behavior will change in pandas 3.0. This inplace method will never work because the intermediate object on which we are setting values always behaves as a copy.
+
+For example, when doing 'df[col].method(value, inplace=True)', try using 'df.method({col: value}, inplace=True)' or df[col] = df[col].method(value) instead, to perform the operation inplace on the original object.
+
+
+  df_combined['num_of_sent'].fillna(df_combined['num_of_sent'].mean(), inplace=True)
+                 id        label  performance_class  potential_class  feedback_len  num_of_sent
+count   2100.000000  2100.000000        2100.000000      2100.000000   2100.000000  2100.000000
+mean    6272.456667     3.820461           1.019057         0.933801    335.242228     4.204663
+std     7901.921527     1.830458           0.559315         0.552887     65.558486     0.468982
+min        1.000000     0.000000           0.000000         0.000000    151.000000     2.000000
+25%      290.000000     3.820461           1.000000         0.933801    335.242228     4.000000
+50%      596.500000     3.820461           1.019057         0.933801    335.242228     4.204663
+75%    10171.000000     3.820461           1.019057         1.000000    335.242228     4.204663
+max    20233.000000     8.000000           2.000000         2.000000    599.000000     8.000000
+count    2100.000000
+mean        0.193007
+std         0.193712
+min        -0.800000
+25%         0.074314
+50%         0.192857
+75%         0.300000
+max         1.000000
+Name: sentiment, dtype: float64
